@@ -1,0 +1,13 @@
+package com.spring.eg3;
+
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.context.ApplicationContext;
+public class MainClass {
+public static void main(String... args) {
+ApplicationContext context=new ClassPathXmlApplicationContext("applicationContext.xml");
+Employee e = (Employee) context.getBean("empl");
+System.out.println("Name : "+e.getName());
+System.out.println("Id : "+e.getId());
+}
+}
+
